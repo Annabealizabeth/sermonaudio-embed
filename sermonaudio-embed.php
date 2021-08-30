@@ -22,13 +22,13 @@ if( !defined( 'ABSPATH' ) ) {
 add_action( 'init', function(){
 	wp_embed_register_handler(
 		'sermonaudio',
-		'#http://(www\.)?sermonaudio\.com/sermoninfo.asp\?SID=([\d]+)#',
+		'#https://(www\.)?sermonaudio\.com/sermoninfo.asp\?SID=([\d]+)#',
 		'wp_register_sermonaudio_embed',
 		true
 	);
 	wp_embed_register_handler(
 		'sermonaudio_2',
-		'#http://(www\.)?sermonaudio\.com/sermoninfo.asp\?m=t&s=([\d]+)#',
+		'#https://(www\.)?sermonaudio\.com/sermoninfo.asp\?m=t&s=([\d]+)#',
 		'wp_register_sermonaudio_embed',
 		true
 	);
@@ -44,7 +44,7 @@ if( !function_exists( 'wp_register_sermonaudio_embed' ) ) {
 	function wp_register_sermonaudio_embed( $matches, $attr, $url, $rawattr )
 	{
 		$embed = sprintf(
-			'<iframe style="min-width:250px;" width="100%%" height="150" frameborder="0" src="http://www.sermonaudio.com/saplayer/player_embed.asp?SID=%1$s"></iframe>',
+			'<iframe style="min-width:250px;" width="100%%" height="150" frameborder="0" src="https://www.sermonaudio.com/saplayer/player_embed.asp?SID=%1$s"></iframe>',
 			esc_attr( $matches[2] )
 		);
 
