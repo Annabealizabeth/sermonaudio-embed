@@ -1,9 +1,9 @@
 ## SermonAudio Embed
 Automatically embed SermonAudio.com sermons
 
-**Version:**			1.0  
+**Version:**			1.1  
 **Requires at least:**	2.9  
-**Tested up to:**		4.5.2  
+**Tested up to:**		5.8 
 **License:**			GPLv2 or later  
 
 ## Installation
